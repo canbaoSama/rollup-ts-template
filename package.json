@@ -1,0 +1,41 @@
+{
+    "name": "front-utils-ts",
+    "version": "0.0.0",
+    "description": "",
+    "exports": {
+        "types": "./dist/types/utils.d.ts",
+        "require": "./dist/utils.umd.js",
+        "import": "./dist/utils.mjs"
+    },
+    "type": "module",
+    "main": "./dist/utils.js",
+    "module": "./dist/utils.esm.js",
+    "umd": "./dist/utils.umd.js",
+    "types": "./dist/types/index.d.ts",
+    "scripts": {
+        "clean:dist": "rimraf dist",
+        "build": "npm run clean:dist && rollup -c",
+        "test": "node test/test.js"
+    },
+    "author": "billyang",
+    "license": "ISC",
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "25.0.7",
+        "@rollup/plugin-json": "6.1.0",
+        "@rollup/plugin-node-resolve": "15.2.3",
+        "@rollup/plugin-terser": "0.4.4",
+        "@rollup/plugin-typescript": "11.1.5",
+        "rollup": "4.9.1",
+        "tslib": "2.6.2",
+        "typescript": "5.3.3"
+    },
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "@babel/core": "^7.23.7",
+        "@babel/preset-env": "^7.23.8",
+        "@rollup/plugin-babel": "^6.0.4",
+        "rimraf": "^5.0.5"
+    }
+}
